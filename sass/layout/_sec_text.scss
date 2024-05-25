@@ -1,89 +1,57 @@
 .text {
-    padding: 60px 0;
+  padding: 40px 0 64px 0;
 
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  li {
+    width: 290px;
+    padding: 21px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  p {
+    padding: 0 10px;
+  }
+  a {
+    color: var(--main-color);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .text {
     li {
-        list-style-type: none;
+      width: 320px;
     }
-
-    li:nth-child(-n+3) p {
-        margin-bottom: 30px;
-    }
-
-    ul div {
-        width: 100%;
-        height: 120px;
-        background-color: var(--svg3-color);
-        border-radius: 4px;
-        margin-bottom: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    h3 {
-        text-align: center;
-        margin: 0;
-        margin-bottom: 10px;
-        @include font(700, 14px, 16px);
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--title-color);
-    }
-
-    p {
-        margin: 0;
-        @include font(400, 14px, 24px);
-        letter-spacing: 0.03em;
-        color: var(--ph-color);
-    }
+  }
 }
-
 @media screen and (min-width: 768px) {
-    .text {
-        padding: 60px 0;
-
-        li {
-            width: 354px;
-        }
-
-        li:nth-child(-n+3) p {
-            margin-bottom: 0;
-        }
-
-        h3{
-            text-align: left;
-        }
-
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        ul div {
-            width: 354px;
-        }
+  .text {
+    li {
+      width: 344px;
+      height: 290px;
     }
+  }
 }
-
-@media screen and (min-width: 1200px) {
-    .text {
-        /* display: flex;
-    justify-content: space-around; */
-        padding: 94px 0;
-
-        ul {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 30px;
-        }
-
-        ul div {
-            width: 270px;
-        }
-
-        li {
-            width: 270px;
-        }
+@media screen and (min-width: 960px) {
+  .text {
+    li {
+      width: 360px;
+      height: 310px;
     }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .text {
+    li {
+      width: 355px;
+    }
+  }
 }
